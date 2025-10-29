@@ -69,3 +69,12 @@ body {
 .chat-message-profile {
   width: 45px;
 }
+
+.welcome-message {
+  color: rgb(173, 173, 173);
+}
+
+.loading-spinner {
+  height: 40px;
+  margin: -15px;
+}
