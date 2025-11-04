@@ -123,19 +123,6 @@
       function ChatMessages({ chatMessages }) {
         const chatMessagesRef = useAutoScroll(chatMessages)
 
-        function sendMessage() {
-          setChatMessages([
-            ...chatMessages,
-            {
-              message: 'test',
-              sender: 'user',
-              id: crypto.randomUUID()
-            }
-          ]);
-
-          setInputText('');
-        }
-
         return (
           <div className = "chat-messages-container" ref = {chatMessagesRef}>
             {chatMessages.map((chatMessage) => {
