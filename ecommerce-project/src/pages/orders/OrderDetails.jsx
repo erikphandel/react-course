@@ -5,6 +5,9 @@ export function OrderDetails({ order }) {
   return (
     <div className="order-details-grid">
       {order.products.map((orderProduct) => {
+        const orderId = order.id;
+        const productId = orderProduct.product.id;
+
         return (
           <Fragment key={orderProduct.product.id}>
             <div className="product-image-container">
@@ -16,7 +19,8 @@ export function OrderDetails({ order }) {
                 {orderProduct.product.name}
               </div>
               <div className="product-delivery-date">
-                Arriving on: {dayjs(orderProduct.estimatedDeliveryTimeMs).format('MMMM D')}
+                Arriving on: 
+                {dayjs(orderProduct.estimatedDeliveryTimeMs).format('MMMM D')}
               </div>
               <div className="product-quantity">
                 Quantity: {orderProduct.quantity}
@@ -28,7 +32,7 @@ export function OrderDetails({ order }) {
             </div>
 
             <div className="product-actions">
-              <a href="/tracking">
+              <a href= {`/tracking/${orderId}/${productId}`} >
                 <button className="track-package-button button-secondary">
                   Track package
                 </button>
