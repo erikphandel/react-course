@@ -8,6 +8,9 @@ import { NotFoundPage } from './pages/utils/NotFoundPage.jsx'
 import { TrackingPage } from './pages/tracking/TrackingPage.jsx'
 import './App.css'
 
+window.axios = axios;
+// use axios.post('api/reset') on the console to reset the database to a default state.
+
 function App() {
   const [cart, setCart] = useState([]);
 
@@ -26,7 +29,7 @@ function App() {
     <Routes>
       <Route index element={<HomePage cart={cart} loadCart={loadCart} />} />
       <Route path="checkout" element={<CheckoutPage cart={cart} loadCart={loadCart} />} />
-      <Route path="orders" element={<OrdersPage cart={cart} />} />
+      <Route path="orders" element={<OrdersPage cart={cart} loadCart={loadCart} />} />
       <Route path="tracking/:orderId/:productId" element={<TrackingPage cart={cart} />} />
       <Route path="*" element={<NotFoundPage cart={cart} />} />
     </Routes>
