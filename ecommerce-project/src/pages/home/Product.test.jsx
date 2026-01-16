@@ -61,5 +61,6 @@ describe('Product component', () => {
       quantity: 1
     });
     expect(loadCart).toHaveBeenCalled();
+    
   });
 });
