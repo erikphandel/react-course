@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { OrderHeader } from "./OrderHeader";
 import { OrderDetails } from "./OrderDetails";
 

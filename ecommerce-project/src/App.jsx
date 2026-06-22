@@ -6,7 +6,6 @@ import { CheckoutPage } from './pages/checkout/CheckoutPage.jsx'
 import { OrdersPage } from './pages/orders/OrdersPage.jsx'
 import { NotFoundPage } from './pages/utils/NotFoundPage.jsx'
 import { TrackingPage } from './pages/tracking/TrackingPage.jsx'
-import './App.css'
 
 window.axios = axios;
 // use axios.post('api/reset') on the console to reset the database to a default state.
