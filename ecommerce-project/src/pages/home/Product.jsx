@@ -2,7 +2,7 @@ import { useState } from "react";
 import { formatMoney } from "../../utils/money";
 import axios from "axios";
 
-export function Product({ product, loadCart }) {
+export  function Product({ product, loadCart }) {
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
 

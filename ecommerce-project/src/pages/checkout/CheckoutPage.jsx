@@ -7,7 +7,7 @@ import './CheckoutPage.css'
 import { CheckoutHeader } from './CheckoutHeader'
 
 
-export function CheckoutPage({ cart, loadCart }) {
+export default function CheckoutPage({ cart, loadCart }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
 
   useEffect(() => {

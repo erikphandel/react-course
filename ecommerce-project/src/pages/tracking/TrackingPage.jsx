@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import './TrackingPage.css';
 import dayjs from 'dayjs';
 
-export function TrackingPage({ cart }) {
+export default function TrackingPage({ cart }) {
   const { orderId, productId } = useParams();
   const [order, setOrder] = useState(null);
 
